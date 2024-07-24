@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .bigbox {
+      width: 500px;
+      height: 500px;
+      border: 10px solid gray;
+      margin: 100px auto;
+      /* 容器 */
+      display: flex;
+    }
+    .bigbox > div {
+      width: 50px;
+      height: 50px;
+      border: 2px dashed red;
+    }
+    /* 第一个项目 */
+    .bigbox > div:nth-child(1) {
+      order: 5;
+    }
+    /* 第五个项目 */
+    .bigbox > div:nth-child(5) {
+      order: -1;
+    }
+
+    /* 
+      属性：
+          order：用来调整项目的顺序
+          默认值：0
+          取值越大，顺序越靠后
+          取值越小，顺序越靠前
+     */
+  </style>
+  <body>
+    <!-- 容器 -->
+    <div class="bigbox">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+  </body>
+</html>

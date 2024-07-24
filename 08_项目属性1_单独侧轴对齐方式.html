@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .bigbox {
+      width: 500px;
+      height: 500px;
+      border: 10px solid gray;
+      margin: 100px auto;
+      /* 容器 */
+      display: flex;
+    }
+    .bigbox > div {
+      width: 50px;
+      height: 50px;
+      border: 2px dashed red;
+    }
+    /* 第一个项目 */
+    .bigbox > div:nth-child(1) {
+      align-self: flex-start;
+    }
+    /* 第二个项目 */
+    .bigbox > div:nth-child(2) {
+      align-self: flex-end;
+    }
+    /* 第三个项目 */
+    .bigbox > div:nth-child(3) {
+      align-self: center;
+    }
+    /* 第四个项目 */
+    .bigbox > div:nth-child(4) {
+      align-self: baseline;
+    }
+    /* 第五个项目 */
+    .bigbox > div:nth-child(5) {
+      /* 高度自适应 */
+      height: auto;
+      align-self: stretch;
+    }
+
+    /* 
+      属性：align-self：用来调整项目自身的对齐方式
+          flex-start ===================>项目自身的开始位置显示
+          flex-end ===================>项目自身的结束位置显示
+          center ===================>项目自身的居中位置显示
+          baseline ===================>项目自身的基线位置显示，效果与开始位置一致，基本不用。
+          stretch ===================>默认的拉伸效果，前提是项目不能有高度或者高度要自适应
+     */
+  </style>
+  <body>
+    <!-- 容器 -->
+    <div class="bigbox">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+  </body>
+</html>

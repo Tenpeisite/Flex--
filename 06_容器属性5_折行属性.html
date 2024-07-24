@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .bigbox{
+        width: 500px;
+        height: 500px;
+        border: 10px solid gray;;
+        margin: 100px auto;
+        /* 容器 */
+        display: flex;
+        /* 解决项目间挤压折行的效果 */
+        flex-wrap: wrap;
+    }
+    .bigbox>div{
+        width: 50px;
+        /* height: 50px; */
+        border: 2px dashed red;
+    }
+
+    /* 
+        属性：
+            flex-wrap：用来控制项目是否换行
+            nowrap ===================>不换行（一行放不下的话会压缩项目宽度）
+            wrap ===================>换行
+            wrap-reverse ===================>换行，换行后从右到左
+     */
+  </style>
+  <body>
+    <!-- 容器 -->
+    <div class="bigbox">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+  </body>
+</html>
